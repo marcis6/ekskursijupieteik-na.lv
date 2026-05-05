@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ekskursiju pieteikšanās</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- HOME -->
+<div id="p0" class="page active">
+  <h1>Ekskursiju pieteikšanās</h1>
+  <p>Vienkārša pieteikšanās sistēma</p>
+  <button onclick="show('p1')">Pieteikt klasi</button>
+</div>
+
+<!-- PICK CLASS -->
+<div id="p1" class="page">
+  <h1>Izvēlieties klasi</h1>
+
+  <div class="card">
+    <h2>1. – 3. klase</h2>
+    <p>Sākumskola</p>
+    <button onclick="goToForm('1. – 3. klase')">Izvēlēties</button>
+  </div>
+
+  <div class="card">
+    <h2>4. – 6. klase</h2>
+    <p>Pamatskola</p>
+    <button onclick="goToForm('4. – 6. klase')">Izvēlēties</button>
+  </div>
+
+  <div class="card">
+    <h2>7. – 12. klase</h2>
+    <p>Vidusskola</p>
+    <button onclick="goToForm('7. – 12. klase')">Izvēlēties</button>
+  </div>
+
+  <br>
+  <button onclick="show('p0')">Atpakaļ</button>
+</div>
+
+<!-- FORM -->
+<div id="p2" class="page">
+  <h1>Pieteikuma forma</h1>
+  <p id="form-subtitle"></p>
+
+  <h3>Ekskursijas informācija</h3>
+  <label>Vietas nosaukums</label><br>
+  <input type="text" placeholder="Vietas nosaukums"><br>
+
+  <label>Adrese</label><br>
+  <input type="text" placeholder="Adrese"><br>
+
+  <label>Datums</label><br>
+  <input type="date"><br>
+
+  <label>Transports</label><br>
+  <select>
+    <option>Autobuss</option>
+    <option>Sabiedriskais transports</option>
+    <option>Cits</option>
+  </select><br>
+
+  <label>Virziens</label><br>
+  <select>
+    <option>Zinātne</option>
+    <option>Izklaide</option>
+    <option>Sportiska</option>
+    <option>Vēsture</option>
+    <option>Cits</option>
+  </select><br>
+
+  <h3>Skolotāja informācija</h3>
+  <label>Vārds</label><br>
+  <input type="text" placeholder="Vārds"><br>
+
+  <label>Uzvārds</label><br>
+  <input type="text" placeholder="Uzvārds"><br>
+
+  <label>E-pasts</label><br>
+  <input type="email" placeholder="epasts@example.com"><br>
+
+  <label>Tālrunis</label><br>
+  <input type="tel" placeholder="+371 20123456"><br>
+
+  <h3>Līdzatbildīgais vecāks</h3>
+  <label>Vārds un uzvārds</label><br>
+  <input type="text" placeholder="Vārds un uzvārds"><br>
+
+  <label>Tālrunis</label><br>
+  <input type="tel" placeholder="+371 20123456"><br>
+
+  <h3>Medicīniskā informācija</h3>
+  <label>Alerģijas vai īpašas vajadzības</label><br>
+  <textarea placeholder="Norādiet alerģijas vai īpašas vajadzības..."></textarea><br>
+
+  <input type="checkbox" id="consent">
+  <label for="consent">Es apliecinu, ka visa informācija ir pareiza.</label><br><br>
+
+  <button onclick="show('p3')">Iesniegt pieteikumu</button>
+  <button onclick="show('p1')">Atpakaļ</button>
+</div>
+
+<!-- SUCCESS -->
+<div id="p3" class="page">
+  <h1>✅ Pieteikums iesniegts!</h1>
+  <p>Paldies! Mēs sazināsimies ar jums tuvākajā laikā.</p>
+  <button onclick="show('p0')">Atpakaļ uz sākumu</button>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
